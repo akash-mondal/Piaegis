@@ -70,3 +70,4 @@ streamlit
 google-generativeai
 plotly
 streamlit-mermaid
+zaproxy

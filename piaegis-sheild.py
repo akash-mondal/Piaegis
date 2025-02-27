@@ -18,7 +18,7 @@ PRESET_FILE_TYPES = {
     "JavaScript Web Apps": (".js", ".jsx", ".ts", ".tsx", ".html", ".css", ".json"),
     "Java (Eclipse) Projects": (".java", ".jsp", ".xml", ".gradle", ".properties", ".project", ".classpath"),
     "Python Projects": (".py", ".pyw", ".ini", ".cfg", ".txt", ".yaml", ".yml", ".json"),
-    "Android Studio Projects": (".java", ".kt", ".xml", ".gradle", ".properties", ".manifest"),
+    "Android Studio Projects": (".java", ".kt"),
     "All Supported Types": ('.py', '.java', '.c', '.cpp', '.h', '.hpp', '.js', '.html', '.css', '.xml', '.json', '.txt', '.md',
               '.sh', '.gradle', '.kt', '.swift', '.cs', '.vb', '.php', '.rb', '.go', '.sql', '.ini', '.config',
               '.properties', '.yaml', '.yml', '.gitignore', '.dockerfile', '.tf', '.tfvars', '.pom', '.jsp', '.aspx',
@@ -223,7 +223,7 @@ class InsecureDesignAgent(BaseAgent):
 
     @property
     def system_prompt(self):
-        return """You are a security analyst specializing in identifying insecure design and logic flaws.  Provide JSON output."""
+        return """You are a security analyst specializing in identifying ALL easy to find and complex insecure design and logic flaws.  Provide JSON output."""
 
     @property
     def description(self) -> str:
@@ -268,7 +268,7 @@ class CryptographicFailuresAgent(BaseAgent):
 
     @property
     def system_prompt(self):
-        return """You are a security analyst specializing in cryptographic failures. Provide JSON output."""
+        return """You are a security analyst specializing in ALL easy to find and complex cryptographic failures. Provide JSON output."""
 
     @property
     def description(self) -> str:
@@ -313,7 +313,7 @@ class MemoryManagementAgent(BaseAgent):
 
     @property
     def system_prompt(self):
-        return """You are a security analyst specializing in memory management issues in C and C++ code. Provide JSON output."""
+        return """You are a security analyst specializing in ALL easy to find and complex memory management issues in C and C++ code. Provide JSON output."""
 
     @property
     def description(self) -> str:
@@ -358,7 +358,7 @@ class PathTraversalAgent(BaseAgent):
 
     @property
     def system_prompt(self) -> str:
-      return  """You are a security analyst specializing in path traversal vulnerabilities. Provide JSON output."""
+      return  """You are a security analyst specializing in ALL easy to find and complex path traversal vulnerabilities. Provide JSON output."""
 
     @property
     def description(self) -> str:
@@ -403,7 +403,7 @@ class HardcodedSecretsAgent(BaseAgent):
 
     @property
     def system_prompt(self) -> str:
-      return """You are a security analyst focused on identifying hardcoded secrets and insecure credential storage. Provide JSON output."""
+      return """You are a security analyst focused on identifying ALL easy to find and complex hardcoded secrets and insecure credential storage. Provide JSON output."""
 
     @property
     def description(self) -> str:
@@ -448,7 +448,7 @@ class InsecureDefaultsAgent(BaseAgent):
 
   @property
   def system_prompt(self):
-      return """You are a security analyst specializing in identifying insecure default configurations. Provide JSON output."""
+      return """You are a security analyst specializing in identifying ALL easy to find and complex insecure default configurations. Provide JSON output."""
 
   @property
   def description(self) -> str:
@@ -494,7 +494,7 @@ class SerializationIssuesAgent(BaseAgent):
 
   @property
   def system_prompt(self):
-      return """You are a security analyst specializing in insecure deserialization vulnerabilities. Provide JSON output."""
+      return """You are a security analyst specializing in ALL easy to find and complex insecure deserialization vulnerabilities. Provide JSON output."""
 
   @property
   def description(self) -> str:

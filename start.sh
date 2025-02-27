@@ -51,3 +51,6 @@ celery -A app.celery.celery_app worker --loglevel=debug -Q "${CELERY_QUEUE_NAME}
 
 streamlit run piaegis-sheild.py &
 echo "Starting piaegis-sheild"
+
+streamlit run Fortify.py &
+echo "Starting piaegis-foritfy"
